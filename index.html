@@ -3,78 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nova Academy - Future of Education</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Sinhala:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>සුප්පුවා🤣 - දැනුමේ නව මාර්ගය</title>
     <style>
-        :root {
-            --primary: #6366f1;
-            --primary-dark: #4f46e5;
-            --secondary: #f59e0b;
-            --accent: #ec4899;
-            --dark: #1e1b4b;
-            --light: #f8fafc;
-            --gradient: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
-        }
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
+        
         body {
-            font-family: 'Inter', 'Noto Sans Sinhala', sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            color: #334155;
-            overflow-x: hidden;
         }
-
-        /* Navigation */
-        nav {
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            padding: 20px 0;
             position: fixed;
-            top: 0;
             width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
+            top: 0;
             z-index: 1000;
-            padding: 1rem 5%;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            border-bottom: 2px solid #333;
         }
-
-        .nav-container {
-            max-width: 1400px;
+        
+        .container {
+            max-width: 1200px;
             margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-
+        
         .logo {
-            font-size: 1.8rem;
-            font-weight: 800;
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
+            font-size: 28px;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+            letter-spacing: 2px;
         }
-
+        
+        .logo span {
+            color: #00d4ff;
+        }
+        
         .nav-links {
             display: flex;
-            gap: 2.5rem;
             list-style: none;
+            gap: 30px;
         }
-
+        
         .nav-links a {
+            color: #fff;
             text-decoration: none;
-            color: #475569;
-            font-weight: 500;
-            transition: all 0.3s;
+            font-size: 16px;
+            transition: color 0.3s;
             position: relative;
         }
-
+        
+        .nav-links a:hover {
+            color: #00d4ff;
+        }
+        
         .nav-links a::after {
             content: '';
             position: absolute;
@@ -82,1022 +78,313 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: var(--primary);
+            background: #00d4ff;
             transition: width 0.3s;
         }
-
+        
         .nav-links a:hover::after {
             width: 100%;
         }
-
-        .nav-links a:hover {
-            color: var(--primary);
-        }
-
-        .cta-btn {
-            background: var(--gradient);
-            color: white;
-            padding: 0.8rem 2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: transform 0.3s, box-shadow 0.3s;
-            border: none;
-            cursor: pointer;
-        }
-
-        .cta-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
-        }
-
+        
         /* Hero Section */
         .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            background: linear-gradient(135deg, #f0f9ff 0%, #e0e7ff 100%);
-            padding: 8rem 5% 4rem;
-            position: relative;
-            overflow: hidden;
+            margin-top: 80px;
+            padding: 100px 0;
+            text-align: center;
+            background: radial-gradient(circle at center, #1a1a2e 0%, #000000 100%);
         }
-
-        .hero::before {
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #fff, #00d4ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            color: #aaa;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: transparent;
+            color: #00d4ff;
+            border: 2px solid #00d4ff;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 18px;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background: #00d4ff;
+            color: #000;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+        }
+        
+        /* Topics Section */
+        .topics {
+            padding: 80px 0;
+            background: #0a0a0a;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+            color: #fff;
+            position: relative;
+        }
+        
+        .section-title::after {
             content: '';
             position: absolute;
-            top: -50%;
-            right: -20%;
-            width: 800px;
-            height: 800px;
-            background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
-            animation: pulse 4s ease-in-out infinite;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: #00d4ff;
         }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); opacity: 0.5; }
-            50% { transform: scale(1.1); opacity: 0.8; }
-        }
-
-        .hero-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .hero-content h1 {
-            font-size: 4rem;
-            font-weight: 800;
-            line-height: 1.1;
-            color: var(--dark);
-            margin-bottom: 1.5rem;
-        }
-
-        .hero-content h1 span {
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .hero-content p {
-            font-size: 1.25rem;
-            color: #64748b;
-            margin-bottom: 2rem;
-            max-width: 500px;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--primary);
-            border: 2px solid var(--primary);
-            padding: 0.8rem 2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s;
-        }
-
-        .btn-secondary:hover {
-            background: var(--primary);
-            color: white;
-        }
-
-        .hero-image {
-            position: relative;
-        }
-
-        .hero-image img {
-            width: 100%;
-            border-radius: 30px;
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
-            animation: float 6s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-        }
-
-        .floating-card {
-            position: absolute;
-            background: white;
-            padding: 1rem 1.5rem;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            animation: float 5s ease-in-out infinite;
-        }
-
-        .card-1 {
-            top: 10%;
-            left: -10%;
-            animation-delay: 0s;
-        }
-
-        .card-2 {
-            bottom: 20%;
-            right: -5%;
-            animation-delay: 1s;
-        }
-
-        .floating-card i {
-            color: var(--secondary);
-            font-size: 1.5rem;
-            margin-right: 0.5rem;
-        }
-
-        /* Stats Section */
-        .stats {
-            padding: 4rem 5%;
-            background: white;
-        }
-
-        .stats-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-            text-align: center;
-        }
-
-        .stat-item h3 {
-            font-size: 3rem;
-            color: var(--primary);
-            font-weight: 800;
-        }
-
-        .stat-item p {
-            color: #64748b;
-            font-weight: 500;
-        }
-
-        /* Programs Section */
-        .programs {
-            padding: 6rem 5%;
-            background: #f8fafc;
-        }
-
-        .section-header {
-            text-align: center;
-            max-width: 600px;
-            margin: 0 auto 4rem;
-        }
-
-        .section-header h2 {
-            font-size: 2.5rem;
-            color: var(--dark);
-            margin-bottom: 1rem;
-        }
-
-        .section-header p {
-            color: #64748b;
-        }
-
-        .programs-grid {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .program-card {
-            background: white;
-            border-radius: 24px;
-            overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-            transition: transform 0.3s, box-shadow 0.3s;
-            cursor: pointer;
-        }
-
-        .program-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-        }
-
-        .program-image {
-            height: 200px;
-            background: var(--gradient);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            color: white;
-        }
-
-        .program-content {
-            padding: 2rem;
-        }
-
-        .program-content h3 {
-            font-size: 1.5rem;
-            color: var(--dark);
-            margin-bottom: 0.5rem;
-        }
-
-        .program-content p {
-            color: #64748b;
-            margin-bottom: 1rem;
-        }
-
-        .program-meta {
-            display: flex;
-            gap: 1rem;
-            font-size: 0.9rem;
-            color: #94a3b8;
-        }
-
-        .program-meta span {
-            display: flex;
-            align-items: center;
-            gap: 0.3rem;
-        }
-
-        /* Features Section */
-        .features {
-            padding: 6rem 5%;
-            background: white;
-        }
-
-        .features-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .features-list {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
-
-        .feature-item {
-            display: flex;
-            gap: 1.5rem;
-            align-items: flex-start;
-        }
-
-        .feature-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            color: var(--primary);
-            flex-shrink: 0;
-        }
-
-        .feature-text h3 {
-            font-size: 1.3rem;
-            color: var(--dark);
-            margin-bottom: 0.5rem;
-        }
-
-        .feature-text p {
-            color: #64748b;
-        }
-
-        /* Testimonials */
-        .testimonials {
-            padding: 6rem 5%;
-            background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
-            color: white;
-        }
-
-        .testimonials-container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .testimonials .section-header h2,
-        .testimonials .section-header p {
-            color: white;
-        }
-
-        .testimonial-grid {
+        
+        .topics-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            gap: 30px;
         }
-
-        .testimonial-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            padding: 2rem;
-            border-radius: 24px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+        
+        .topic-card {
+            background: linear-gradient(145deg, #1a1a1a, #0f0f0f);
+            border-radius: 15px;
+            padding: 30px;
+            border: 1px solid #333;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
         }
-
-        .testimonial-card p {
-            font-size: 1.1rem;
+        
+        .topic-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.1), transparent);
+            transition: left 0.5s;
+        }
+        
+        .topic-card:hover::before {
+            left: 100%;
+        }
+        
+        .topic-card:hover {
+            transform: translateY(-10px);
+            border-color: #00d4ff;
+            box-shadow: 0 20px 40px rgba(0, 212, 255, 0.1);
+        }
+        
+        .topic-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+        
+        .topic-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #00d4ff;
+        }
+        
+        .topic-card p {
+            color: #aaa;
             line-height: 1.8;
-            margin-bottom: 1.5rem;
-            font-style: italic;
         }
-
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
+        
+        .read-more {
+            display: inline-block;
+            margin-top: 15px;
+            color: #00d4ff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
         }
-
-        .author-avatar {
-            width: 50px;
-            height: 50px;
-            background: var(--gradient);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
+        
+        .read-more:hover {
+            color: #fff;
         }
-
-        .author-info h4 {
-            font-weight: 600;
-        }
-
-        .author-info span {
-            color: #a5b4fc;
-            font-size: 0.9rem;
-        }
-
-        /* Contact Section */
-        .contact {
-            padding: 6rem 5%;
-            background: #f8fafc;
-        }
-
-        .contact-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-        }
-
-        .contact-info h2 {
-            font-size: 2.5rem;
-            color: var(--dark);
-            margin-bottom: 1rem;
-        }
-
-        .contact-details {
-            margin-top: 2rem;
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            color: #64748b;
-        }
-
-        .contact-item i {
-            width: 50px;
-            height: 50px;
-            background: white;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .contact-form {
-            background: white;
-            padding: 3rem;
-            border-radius: 24px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: var(--dark);
-            font-weight: 500;
-        }
-
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
-            width: 100%;
-            padding: 1rem;
-            border: 2px solid #e2e8f0;
-            border-radius: 12px;
-            font-family: inherit;
-            transition: border-color 0.3s;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus,
-        .form-group select:focus {
-            outline: none;
-            border-color: var(--primary);
-        }
-
-        .submit-btn {
-            width: 100%;
-            background: var(--gradient);
-            color: white;
-            padding: 1rem;
-            border: none;
-            border-radius: 12px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: transform 0.3s;
-        }
-
-        .submit-btn:hover {
-            transform: translateY(-2px);
-        }
-
+        
         /* Footer */
         footer {
-            background: var(--dark);
-            color: white;
-            padding: 4rem 5% 2rem;
+            background: #000;
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid #333;
         }
-
-        .footer-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 4rem;
+        
+        footer p {
+            color: #666;
         }
-
-        .footer-brand h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .footer-brand p {
-            color: #94a3b8;
-            margin-bottom: 2rem;
-        }
-
+        
         .social-links {
-            display: flex;
-            gap: 1rem;
+            margin-top: 20px;
         }
-
+        
         .social-links a {
-            width: 40px;
-            height: 40px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-decoration: none;
-            transition: all 0.3s;
-        }
-
-        .social-links a:hover {
-            background: var(--primary);
-            transform: translateY(-3px);
-        }
-
-        .footer-links h4 {
-            margin-bottom: 1.5rem;
-            color: white;
-        }
-
-        .footer-links ul {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 0.8rem;
-        }
-
-        .footer-links a {
-            color: #94a3b8;
+            color: #fff;
+            font-size: 24px;
+            margin: 0 15px;
             text-decoration: none;
             transition: color 0.3s;
         }
-
-        .footer-links a:hover {
-            color: white;
+        
+        .social-links a:hover {
+            color: #00d4ff;
         }
-
-        .footer-bottom {
-            max-width: 1400px;
-            margin: 3rem auto 0;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            text-align: center;
-            color: #64748b;
-        }
-
-        /* Mobile Menu */
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            color: var(--dark);
-            cursor: pointer;
-        }
-
+        
         /* Responsive */
-        @media (max-width: 968px) {
+        @media (max-width: 768px) {
             .nav-links {
                 display: none;
             }
-
-            .mobile-menu-btn {
-                display: block;
+            
+            .hero h1 {
+                font-size: 32px;
             }
-
-            .hero-container,
-            .features-container,
-            .contact-container {
+            
+            .topics-grid {
                 grid-template-columns: 1fr;
             }
-
-            .hero-content h1 {
-                font-size: 2.5rem;
-            }
-
-            .stats-container {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .footer-container {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-        }
-
-        /* Animations */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease-out;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <div class="nav-container">
-            <div class="logo">
-                <i class="fas fa-graduation-cap"></i>
-                Nova Academy
-            </div>
-            <ul class="nav-links">
-                <li><a href="#home">මුල් පිටුව</a></li>
-                <li><a href="#programs">පාඨමාලා</a></li>
-                <li><a href="#features">විශේෂාංග</a></li>
-                <li><a href="#testimonials">ප්‍රශංසා</a></li>
-                <li><a href="#contact">සම්බන්ධතා</a></li>
-            </ul>
-            <a href="#contact" class="cta-btn">අප හා සම්බන්ධ වන්න</a>
-            <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-container">
-            <div class="hero-content fade-in">
-                <h1>අනාගතය <span>ගොඩනගන්න</span><br>අදම ආරම්භ කරන්න</h1>
-                <p>Nova Academy සමඟින් ඔබේ දරුවාගේ අධ්‍යාපන ගමන නව මානයකට ඔසවා තබන්න. නවීන තාක්ෂණය සහ වෘත්තීය ගුරුවරුන් සමඟින් අපි විශිෂ්ටත්වය කරා ඔබව රැගෙන යමු.</p>
-                <div class="hero-buttons">
-                    <a href="#programs" class="cta-btn">පාඨමාලා බලන්න</a>
-                    <a href="#contact" class="btn-secondary">තවත් විස්තර</a>
-                </div>
-            </div>
-            <div class="hero-image fade-in">
-                <img src="https://kimi-web-img.moonshot.cn/img/cdn.dribbble.com/3c4e3849f23bd04187cfe71073df21106204c7bd.jpg" alt="Students Learning">
-                <div class="floating-card card-1">
-                    <i class="fas fa-star"></i>
-                    <strong>4.9/5</strong> රේටිං
-                </div>
-                <div class="floating-card card-2">
-                    <i class="fas fa-users"></i>
-                    <strong>2000+</strong> සිසුන්
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="stats">
-        <div class="stats-container fade-in">
-            <div class="stat-item">
-                <h3>15+</h3>
-                <p>වසරේ අත්දැකීම</p>
-            </div>
-            <div class="stat-item">
-                <h3>50+</h3>
-                <p>වෘත්තීය ගුරුවරු</p>
-            </div>
-            <div class="stat-item">
-                <h3>25+</h3>
-                <p>පාඨමාලා</p>
-            </div>
-            <div class="stat-item">
-                <h3>98%</h3>
-                <p>සාර්ථකත්ව අනුපාතය</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Programs Section -->
-    <section class="programs" id="programs">
-        <div class="section-header fade-in">
-            <h2>අපගේ පාඨමාලා</h2>
-            <p>විවිධ අධ්‍යාපන ක්ෂේත්‍ර වලින් ඔබට සුදුසුම පාඨමාලාව තෝරාගන්න</p>
-        </div>
-        <div class="programs-grid">
-            <div class="program-card fade-in">
-                <div class="program-image">
-                    <i class="fas fa-laptop-code"></i>
-                </div>
-                <div class="program-content">
-                    <h3>තොරතුරු තාක්ෂණය</h3>
-                    <p>Programming, Web Development, AI/ML සහ Data Science පිළිබඳ පූර්ණ පාඨමාලා</p>
-                    <div class="program-meta">
-                        <span><i class="fas fa-clock"></i> 6 මාස</span>
-                        <span><i class="fas fa-certificate"></i> සහතිකය</span>
-                    </div>
-                </div>
-            </div>
-            <div class="program-card fade-in">
-                <div class="program-image" style="background: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);">
-                    <i class="fas fa-business-time"></i>
-                </div>
-                <div class="program-content">
-                    <h3>ව්‍යාපාර කළමනාකරණය</h3>
-                    <p>MBA, Marketing, Finance සහ Entrepreneurship පිළිබඳ වෘත්තීය පුහුණුව</p>
-                    <div class="program-meta">
-                        <span><i class="fas fa-clock"></i> 1 වසර</span>
-                        <span><i class="fas fa-certificate"></i> ඩිප්ලෝමා</span>
-                    </div>
-                </div>
-            </div>
-            <div class="program-card fade-in">
-                <div class="program-image" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
-                    <i class="fas fa-language"></i>
-                </div>
-                <div class="program-content">
-                    <h3>භාෂා පාඨමාලා</h3>
-                    <p>ඉංග්‍රීසි, චීන, ජපන් සහ කොරියානු භාෂා පුහුණුව</p>
-                    <div class="program-meta">
-                        <span><i class="fas fa-clock"></i> 3 මාස</span>
-                        <span><i class="fas fa-certificate"></i> සහතිකය</span>
-                    </div>
-                </div>
-            </div>
-            <div class="program-card fade-in">
-                <div class="program-image" style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);">
-                    <i class="fas fa-palette"></i>
-                </div>
-                <div class="program-content">
-                    <h3>ක්‍රියේටිව් ඩිසයින</h3>
-                    <p>Graphic Design, UI/UX, Animation සහ Video Editing පාඨමාලා</p>
-                    <div class="program-meta">
-                        <span><i class="fas fa-clock"></i> 4 මාස</span>
-                        <span><i class="fas fa-certificate"></i> සහතිකය</span>
-                    </div>
-                </div>
-            </div>
-            <div class="program-card fade-in">
-                <div class="program-image" style="background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);">
-                    <i class="fas fa-flask"></i>
-                </div>
-                <div class="program-content">
-                    <h3>විද්‍යා හා ගණිතය</h3>
-                    <p>Physics, Chemistry, Biology සහ Advanced Mathematics පිළිබඳ විශේෂ පන්ති</p>
-                    <div class="program-meta">
-                        <span><i class="fas fa-clock"></i> 6 මාස</span>
-                        <span><i class="fas fa-certificate"></i> සහතිකය</span>
-                    </div>
-                </div>
-            </div>
-            <div class="program-card fade-in">
-                <div class="program-image" style="background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);">
-                    <i class="fas fa-robot"></i>
-                </div>
-                <div class="program-content">
-                    <h3>රොබෝ තාක්ෂණය</h3>
-                    <p>Arduino, Raspberry Pi, IoT සහ Robotics පිළිබඳ පාඨමාලා</p>
-                    <div class="program-meta">
-                        <span><i class="fas fa-clock"></i> 5 මාස</span>
-                        <span><i class="fas fa-certificate"></i> සහතිකය</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="features" id="features">
-        <div class="features-container">
-            <div class="features-list fade-in">
-                <div class="section-header" style="text-align: left; margin: 0 0 2rem 0;">
-                    <h2>ඇයි Nova Academy?</h2>
-                    <p>අපගේ විශේෂාංග සහ සේවා</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-chalkboard-teacher"></i>
-                    </div>
-                    <div class="feature-text">
-                        <h3>වෘත්තීය ගුරුවරුන්</h3>
-                        <p>අත්දැකීම් බහුල, සුදුසුකම් ලත් ගුරුවරුන්ගෙන් පුහුණුව ලබා දෙයි</p>
-                    </div>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-laptop"></i>
-                    </div>
-                    <div class="feature-text">
-                        <h3>නවීන තාක්ෂණය</h3>
-                        <p>අවසන් තාක්ෂණික උපකරණ සහිත පන්ති කාමර</p>
-                    </div>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-clock"></i>
-                    </div>
-                    <div class="feature-text">
-                        <h3>ඉල්ලුමට අනුව කාලසටහන්</h3>
-                        <p>ඔබේ පහසුවට අනුව උදේ, දවල් හෝ සවස පන්ති</p>
-                    </div>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-hands-helping"></i>
-                    </div>
-                    <div class="feature-text">
-                        <h3>වෘත්තීය මඟ පෙන්වීම</h3>
-                        <p>පුහුණුවෙන් පසු රැකියා අවස්ථා සහ career guidance</p>
-                    </div>
-                </div>
-            </div>
-            <div class="features-image fade-in">
-                <img src="https://kimi-web-img.moonshot.cn/img/blog.schoolspecialty.com/f597b53682a6ad1dfb678a02cf2d73b58ab34662.jpg" alt="Modern Classroom" style="width: 100%; border-radius: 30px; box-shadow: 0 30px 60px rgba(0,0,0,0.15);">
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="testimonials" id="testimonials">
-        <div class="testimonials-container">
-            <div class="section-header fade-in">
-                <h2>සිසුන්ගේ ප්‍රශංසා</h2>
-                <p>අපගේ සිසුන් අප ගැන කියන දේ</p>
-            </div>
-            <div class="testimonial-grid">
-                <div class="testimonial-card fade-in">
-                    <p>"Nova Academy තුළින් මම programming පිළිබඳ ගොඩනැගිල්ලක් ලැබුවා. දැන් මම Software Engineer රැකියාවක් කරනවා. ගුරුවරුන්ගේ සහයෝගය අසමසමයි."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">KM</div>
-                        <div class="author-info">
-                            <h4>කසුන් මධුෂාන්</h4>
-                            <span>Software Engineer - Virtusa</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card fade-in">
-                    <p>"Graphic Design පාඨමාලාව ඉතාම ප්‍රායෝගිකව ඉගැන්වුවා. අද මම Freelance Designer කෙනෙක් විදිහට සාර්ථකව වැඩ කරනවා."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar" style="background: linear-gradient(135deg, #f59e0b, #ef4444);">SP</div>
-                        <div class="author-info">
-                            <h4>සඳුනි පෙරේරා</h4>
-                            <span>Freelance Designer</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card fade-in">
-                    <p>"ඉංග්‍රීසි භාෂා පාඨමාලාවෙන් පසුව IELTS exam එකට 8.0 score එකක් ගත්තා. ගුරුතුමියගේ උපදෙස් නිසාම මට Scholarship එකක් ලැබුණා."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar" style="background: linear-gradient(135deg, #10b981, #059669);">NR</div>
-                        <div class="author-info">
-                            <h4>නිමල් රත්නායක</h4>
-                            <span>University of Melbourne</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="contact-container">
-            <div class="contact-info fade-in">
-                <h2>අප හා සම්බන්ධ වන්න</h2>
-                <p>වැඩි විස්තර සඳහා අපව අමතන්න හෝ පහත form එක පුරවන්න</p>
-                <div class="contact-details">
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <strong>ලිපිනය</strong><br>
-                            123, Education Road, Colombo 07, Sri Lanka
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <strong>දුරකථන</strong><br>
-                            +94 11 234 5678 / +94 77 123 4567
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <strong>ඊමේල්</strong><br>
-                            info@novaacademy.lk
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-clock"></i>
-                        <div>
-                            <strong>විවෘත වේලාව</strong><br>
-                            සඳුදා - සෙනසුරාදා: 8.00 AM - 6.00 PM
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="contact-form fade-in">
-                <form id="contactForm">
-                    <div class="form-group">
-                        <label>ඔබේ නම</label>
-                        <input type="text" placeholder="සම්පූර්ණ නම" required>
-                    </div>
-                    <div class="form-group">
-                        <label>ඊමේල් ලිපිනය</label>
-                        <input type="email" placeholder="example@email.com" required>
-                    </div>
-                    <div class="form-group">
-                        <label>දුරකථන අංකය</label>
-                        <input type="tel" placeholder="07X XXX XXXX">
-                    </div>
-                    <div class="form-group">
-                        <label>පාඨමාලාව තෝරන්න</label>
-                        <select required>
-                            <option value="">පාඨමාලාව තෝරන්න</option>
-                            <option>තොරතුරු තාක්ෂණය</option>
-                            <option>ව්‍යාපාර කළමනාකරණය</option>
-                            <option>භාෂා පාඨමාලා</option>
-                            <option>ක්‍රියේටිව් ඩිසයින</option>
-                            <option>විද්‍යා හා ගණිතය</option>
-                            <option>රොබෝ තාක්ෂණය</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>පණිවිඩය</label>
-                        <textarea rows="4" placeholder="ඔබේ පණිවිඩය..."></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">යොමු කරන්න</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-brand">
-                <h3><i class="fas fa-graduation-cap"></i> Nova Academy</h3>
-                <p>අනාගත පරපුරට ගුණාත්මක අධ්‍යාපනය ලබා දීම අපගේ ඉලක්කයයි. 2009 සිට අධ්‍යාපන ක්ෂේත්‍රයේ සේවය කරමින්.</p>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                </div>
-            </div>
-            <div class="footer-links">
-                <h4>ප්‍රධාන ලින්කු</h4>
-                <ul>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">NOVA <span>ACADEMY</span></a>
+                <ul class="nav-links">
                     <li><a href="#home">මුල් පිටුව</a></li>
-                    <li><a href="#programs">පාඨමාලා</a></li>
-                    <li><a href="#features">විශේෂාංග</a></li>
-                    <li><a href="#contact">සම්බන්ධතා</a></li>
+                    <li><a href="#topics">විෂයයන්</a></li>
+                    <li><a href="#about">අපි ගැන</a></li>
+                    <li><a href="#contact">සම්බන්ධ වන්න</a></li>
                 </ul>
-            </div>
-            <div class="footer-links">
-                <h4>පාඨමාලා</h4>
-                <ul>
-                    <li><a href="#">IT පාඨමාලා</a></li>
-                    <li><a href="#">ව්‍යාපාර කළමනාකරණය</a></li>
-                    <li><a href="#">භාෂා පාඨමාලා</a></li>
-                    <li><a href="#">ක්‍රියේටිව් ඩිසයින</a></li>
-                </ul>
-            </div>
-            <div class="footer-links">
-                <h4>සහය</h4>
-                <ul>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">අප ගැන</a></li>
-                    <li><a href="#">අපගේ කණ්ඩායම</a></li>
-                    <li><a href="#">අපව සම්බන්ධ කරගන්න</a></li>
-                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>දැනුමේ නව මාර්ගයට පිළිගනිමු</h1>
+            <p>ලෝකයේ අද්විතීය ස්ථාන, වනාන්තර, තාක්ෂණය සහ විද්‍යාව ගැන ගවේෂණාත්මක තොරතුරු Nova Academy සමඟ</p>
+            <a href="#topics" class="btn">ගවේෂණය කරන්න</a>
+        </div>
+    </section>
+
+    <section class="topics" id="topics">
+        <div class="container">
+            <h2 class="section-title">විවිධ විෂයයන්</h2>
+            
+            <div class="topics-grid">
+                <div class="topic-card">
+                    <div class="topic-icon">🌳</div>
+                    <h3>ඇමසන් වනාන්තරය</h3>
+                    <p>ලෝකයේ විශාලතම වර්ෂා වනාන්තරය වන ඇමසන්, දකුණු ඇමරිකාවේ පිහිටා ඇත. මෙය ලෝකයේ ඔක්සිජන් නිපදවීමෙන් 20% ක් සපයයි. 390 බිලියන ගසක්, 2.5 මිලියන උරගයින් සහ අපූරු ජීව විවිධත්වයක් මෙහි වාසය කරයි.</p>
+                    <a href="#" class="read-more">තවත් කියවන්න →</a>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-icon">🦁</div>
+                    <h3>සෙරෙන්ගෙටි ජාතික වනෝද්‍යානය</h3>
+                    <p>ටැන්සානියාවේ පිහිටි මෙම වනෝද්‍යානය ලෝකයේ වඩාත්ම ප්‍රසිද්ධ වනජීවී සංක්‍රමණය සිදුවන ස්ථානයයි. සිංහයන්, ඇතුන්, චීටා වැනි සත්වයන් මිලියන ගණනක් මෙහි වාසය කරයි.</p>
+                    <a href="#" class="read-more">තවත් කියවන්න →</a>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-icon">🤖</div>
+                    <h3>කෘතිම බුද්ධිය (AI)</h3>
+                    <p>කෘතිම බුද්ධිය යනු යන්ත්‍රවලට මිනිස් බුද්ධිය අනුකරණය කිරීමේ හැකියාවයි. ChatGPT, DALL-E වැනි මෙවලම් අද වෙළඳපොළේ ජනප්‍රියයි. මෙය රොබෝටික්ස්, වෛද්‍ය විද්‍යාව සහ ස්වයං රථවලට යොදා ගනී.</p>
+                    <a href="#" class="read-more">තවත් කියවන්න →</a>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-icon">🚀</div>
+                    <h3>අභ්‍යවකාශ ගවේෂණය</h3>
+                    <p>නාසා, SpaceX සහ Blue Origin ආයතන අභ්‍යවකාශ ගවේෂණයේ ප්‍රමුඛයන් වේ. මාර්ස් (අඟහරු) යානා, ජාත්‍යන්තර අභ්‍යවකාශ මධ්‍යස්ථානය සහ චන්ද්‍රයාට ආපසු යාම වර්තමාන ඉලක්ක වේ.</p>
+                    <a href="#" class="read-more">තවත් කියවන්න →</a>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-icon">🌊</div>
+                    <h3>මහා බාධක පරය</h3>
+                    <p>ඕස්ට්‍රේලියාවේ පිහිටා ඇති මෙම ලෝකයේ විශාලතම පර පද්ධතිය 2,300 km දිගුය. 400 වර්ග කි.මී. පමණ වන අවකාශයක 1,500 මාළු වර්ග සහ විවිධ කoral පර පවතී.</p>
+                    <a href="#" class="read-more">තවත් කියවන්න →</a>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-icon">⚡</div>
+                    <h3>නවීන තාක්ෂණය</h3>
+                    <p>ක්වාන්ටම් පරිගණක, බ්ලොක්චේන් තාක්ෂණය, 5G සන්නිවේදනය සහ IoT (Internet of Things) වර්තමාන ලෝකය වෙනස් කරමින් පවතී. මෙම තාක්ෂණයන් අනාගතයේ ජීවන රටාව සම්පූර්ණයෙන්ම වෙනස් කරනු ඇත.</p>
+                    <a href="#" class="read-more">තවත් කියවන්න →</a>
+                </div>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Nova Academy. සියලුම හිමිකම් ඇවිරිණි.</p>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <h3 style="color: #00d4ff; margin-bottom: 20px;">NOVA ACADEMY</h3>
+            <p>දැනුම බෙදා හැරීමේ මාර්ගය</p>
+            <div class="social-links">
+                <a href="#">📧</a>
+                <a href="#">📱</a>
+                <a href="#">🌐</a>
+            </div>
+            <p style="margin-top: 30px; font-size: 14px;">© 2024 Nova Academy. සියලු හිමිකම් ඇවිරිණි.</p>
         </div>
     </footer>
 
     <script>
-        // Smooth Scroll
+        // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
             });
         });
 
-        // Fade In Animation
+        // Add animation on scroll
         const observerOptions = {
-            threshold: 0.1,
-            rootMargin: "0px 0px -50px 0px"
+            threshold: 0.1
         };
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
                 }
             });
         }, observerOptions);
 
-        document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
-
-        // Form Submission
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('ඔබගේ පණිවිඩය යොමු කරන ලදී! අපි ඉක්මනින් ඔබව සම්බන්ධ කර ගන්නෙමු.');
-            this.reset();
-        });
-
-        // Mobile Menu Toggle
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        const navLinks = document.querySelector('.nav-links');
-
-        mobileMenuBtn.addEventListener('click', () => {
-            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        document.querySelectorAll('.topic-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
         });
     </script>
 </body>
